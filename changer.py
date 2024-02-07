@@ -22,7 +22,6 @@ Y88b  d88P 888    888  d8888888888 888   Y8888 Y88b  d88P 888        888  T88b
 1. Change the passwords with a specific once ( water marking tokens ) | must set the password at config.json
 2. Change the passwords to a random password
 '''
-colored_text = color_transition_smooth(text)
 Write.Print(text, Colors.green_to_yellow, interval=0)
 def fetchproxy(filename):
     try:
