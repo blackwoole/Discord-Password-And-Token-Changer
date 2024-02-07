@@ -7,18 +7,7 @@ invalid_token = 0
 change_fail = 0
 def set_console_title():
     ctypes.windll.kernel32.SetConsoleTitleW(f'Discord Token/Password Changer, Changed: {changed}, Invalid Tokens: {invalid_token}, Fails: {change_fail}, User: Public')
-def color_transition_smooth(text):
-    colored_text = ''
-    color_steps = len(text)
-    color_range = 255
-    for i, char in enumerate(text):
-        red_intensity = int(color_range * (i / color_steps))
-        green_intensity = int(color_range * ((color_steps - i) / color_steps))
-        red_code = f'\033[38;2;{red_intensity};0;0m'
-        green_code = f'\033[38;2;0;{green_intensity};0m'
-        colored_text += red_code + char + green_code
-    colored_text += Style.RESET_ALL
-    return colored_text
+
 text = '''
  .d8888b.  888    888        d8888 888b    888  .d8888b.  8888888888 8888888b.  
 d88P  Y88b 888    888       d88888 8888b   888 d88P  Y88b 888        888   Y88b 
